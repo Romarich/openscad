@@ -1094,6 +1094,32 @@
               </layout>
              </widget>
             </item>
+            <item row="7" column="0">
+             <widget class="QGroupBox" name="groupBoxDirectManipulation">
+              <property name="title">
+               <string>Direct Manipulation</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayoutDirectManipulation">
+               <property name="rightMargin">
+                <number>9</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QCheckBox" name="checkBoxEnableDirectManipulation">
+                 <property name="text">
+                  <string>Enable Direct Manipulation</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QCheckBox" name="checkBoxEnableLiveCoding">
+                 <property name="text">
+                  <string>Enable Live Coding</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
            </layout>
           </widget>
          </widget>
