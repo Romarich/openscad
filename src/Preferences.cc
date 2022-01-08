@@ -648,6 +648,20 @@ void Preferences::on_checkBoxEnableAutocomplete_toggled(bool state)
 	emit autocompleteChanged(state);
 }
 
+void Preferences::on_checkBoxEnableDirectManipulation_toggled(bool state)
+{
+	QSettingsCached settings;
+	settings.setValue("editor/enableDirectManipulation", state);
+	emit directManipulationChanged(state);
+}
+
+void Preferences::on_checkBoxEnableLiveCoding_toggled(bool state)
+{
+	QSettingsCached settings;
+	settings.setValue("editor/enableLiveCoding", state);
+	emit liveCodingChanged(state);
+}
+
 void Preferences::on_lineEditCharacterThreshold_textChanged(const QString &text)
 {
 	QSettingsCached settings;

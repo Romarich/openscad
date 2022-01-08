@@ -194,6 +194,8 @@ void TabManager::createTab(const QString &filename)
     connect(editor, SIGNAL(showContextMenuEvent(const QPoint&)), this, SLOT(showContextMenuEvent(const QPoint&)));
     connect(Preferences::inst(), SIGNAL(editorConfigChanged()), editor, SLOT(applySettings()));
     connect(Preferences::inst(), SIGNAL(autocompleteChanged(bool)), editor, SLOT(onAutocompleteChanged(bool)));
+    connect(Preferences::inst(), SIGNAL(directManipulationChanged(bool)), editor, SLOT(onDirectManipulationChanged(bool)));
+    connect(Preferences::inst(), SIGNAL(liveCodingChanged(bool)), editor, SLOT(onLiveCodingChanged(bool)));
     connect(Preferences::inst(), SIGNAL(characterThresholdChanged(int)), editor, SLOT(onCharacterThresholdChanged(int)));
     ((ScintillaEditor *)editor)->public_applySettings();
     editor->addTemplate();

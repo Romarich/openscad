@@ -65,6 +65,8 @@ public slots:
 	void on_consoleFontChooser_activated(const QString &);
 	void on_consoleFontSize_currentIndexChanged(const QString &);
 	void on_checkBoxEnableAutocomplete_toggled(bool);
+	void on_checkBoxEnableDirectManipulation_toggled(bool);
+	void on_checkBoxEnableLiveCoding_toggled(bool);
 	void on_lineEditCharacterThreshold_textChanged(const QString &);
   //
 	// editor settings
@@ -119,6 +121,8 @@ signals:
 	void ExperimentalChanged() const ;
 	void updateMouseCentricZoom(bool state) const;
 	void autocompleteChanged(bool status) const;
+	void directManipulationChanged(bool state) const;
+	void liveCodingChanged(bool state) const;
 	void characterThresholdChanged(int val) const;
 	void stepSizeChanged(int val) const;
 	void toolbarExportChanged() const;

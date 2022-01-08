@@ -1337,6 +1337,30 @@ void ScintillaEditor::onAutocompleteChanged(bool state)
     }
 }
 
+void ScintillaEditor::onDirectManipulationChanged(bool state)
+{
+    if(state)
+    {
+        std::cout << "directManip True" << std::endl;
+    }
+    else
+    {
+        std::cout << "directManip False" << std::endl;
+    }
+}
+
+void ScintillaEditor::onLiveCodingChanged(bool state)
+{
+    if(state)
+    {
+        std::cout << "liveCoding True" << std::endl;
+    }
+    else
+    {
+        std::cout << "liveCoding False" << std::endl;
+    }
+}
+
 void ScintillaEditor::onCharacterThresholdChanged(int val)
 {
     qsci->setAutoCompletionThreshold(val <= 0 ? 1 : val);

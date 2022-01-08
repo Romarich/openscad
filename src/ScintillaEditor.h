@@ -142,6 +142,8 @@ private slots:
     void onUserListSelected(const int id, const QString &text);
     void applySettings();
     void onAutocompleteChanged(bool state);
+    void onDirectManipulationChanged(bool state);
+    void onLiveCodingChanged(bool state);
     void onCharacterThresholdChanged(int val);
     void fireModificationChanged();
     void onIndicatorClicked(int line, int col, Qt::KeyboardModifiers state);
